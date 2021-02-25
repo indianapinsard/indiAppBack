@@ -20,3 +20,6 @@ venv.bak/
 # Django stuff:
 *.log
 db.sqlite3
+
+# Flake config
+setup.cfg
