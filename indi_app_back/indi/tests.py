@@ -11,6 +11,7 @@ class ArticleTestCase(TestCase):
 
     def test_article_list_view(self):
         """ArticleList view should return all instances of Article"""
+        
         factory = APIRequestFactory()
         request = factory.get('/article-list/')
         view = ArticleList.as_view()
