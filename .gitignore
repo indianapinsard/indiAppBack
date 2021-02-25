@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]
+*.pyc
+*$py.class
+*.pyc
+
+# git hook (to manage differences betweens windows and unix)
+.git/hook/
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Django stuff:
+*.log
+db.sqlite3
