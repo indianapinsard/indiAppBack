@@ -4,5 +4,4 @@ python:
 install:
   - pip install -r requirements.txt
 script:
-  - python ./indi_app_back/manage.py test
-  - flake8
+  - python indi_app_back/manage.py test
