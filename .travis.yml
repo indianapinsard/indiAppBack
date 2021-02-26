@@ -8,5 +8,7 @@ before-script:
 script:
   - python manage.py test
   - python manage.py collectstatic --noinput --clear
+after-script:
+  - cd ..
 after-success:
   - pull-request.sh
