@@ -1,1 +1,0 @@
-web: gunicorn ecm_api.wsgi --preload --log-file -
