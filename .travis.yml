@@ -3,7 +3,21 @@ python:
   - "3.6"
 install:
   - pip install -r requirements.txt
-before-script:
-  - cd indi_app_back
 script:
   - python manage.py test
+  - python manage.py collectstatic --noinput --clear
+deploy:
+  - provider: heroku
+    api_key: $HEROKU_API_KEY
+    buildpack: heroku/python
+    app: staging-back-app
+    skip_cleanup: true
+    on:
+      branch: staging
+  - provider: heroku
+    api_key: $HEROKU_API_KEY
+    buildpack: heroku/python
+    app: prod-back-app
+    skip_cleanup: true
+    on:
+      branch: master
