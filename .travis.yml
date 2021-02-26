@@ -11,12 +11,14 @@ script:
 deploy:
   - provider: heroku
     api_key: $HEROKU_API_KEY
+    buildpack: python
     app: staging-back-app
     skip_cleanup: true
     on:
       branch: staging
   - provider: heroku
     api_key: $HEROKU_API_KEY
+    buildpack: python
     app: prod-back-app
     skip_cleanup: true
     on:
