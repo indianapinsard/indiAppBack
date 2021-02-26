@@ -9,4 +9,4 @@ script:
   - python manage.py test
   - python manage.py collectstatic --noinput --clear
 after-success:
-  - pull-request.sh
+  - ./pull-request.sh
