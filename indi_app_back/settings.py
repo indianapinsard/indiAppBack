@@ -34,7 +34,7 @@ if ENV == 'dev' or ENV == 'staging':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'staging-back-app.herokuapp.com', 'prod-back-app.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'staging-back-app.herokuapp.com', 'prod-back-app.herokuapp.com', 'api.wattplanner.ovh']
 
 
 # Application definition
