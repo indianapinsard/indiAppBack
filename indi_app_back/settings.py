@@ -13,9 +13,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 from dotenv import load_dotenv
 
-try :
+try:
     load_dotenv()
-except :
+except Exception:
     pass
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -29,9 +29,9 @@ ENV = os.environ.get('ENV')
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if ENV == 'dev' or ENV == 'staging' :
+if ENV == 'dev' or ENV == 'staging':
     DEBUG = True
-else :
+else:
     DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', 'staging-back-app.herokuapp.com', 'prod-back-app.herokuapp.com']
@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'indi_app_back.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-if ENV == 'dev' :
+if ENV == 'dev':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -93,7 +93,7 @@ if ENV == 'dev' :
         }
     }
 
-if ENV == 'staging' :
+if ENV == 'staging':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -105,7 +105,7 @@ if ENV == 'staging' :
         }
     }
 
-if ENV == 'prod' :
+if ENV == 'prod':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -154,7 +154,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-if ENV == 'prod' or ENV == 'staging' :
+if ENV == 'prod' or ENV == 'staging':
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
