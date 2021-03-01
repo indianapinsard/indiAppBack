@@ -22,3 +22,6 @@ setup.cfg
 
 # Staticfiles
 staticfiles/
+
+# Coverage folder
+coverage/
