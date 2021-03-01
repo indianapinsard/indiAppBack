@@ -14,6 +14,9 @@ deploy:
     skip_cleanup: true
     on:
       branch: staging
+    run:
+      - "python manage.py makemigrations"
+      - "python manage.py migrate"
   - provider: heroku
     api_key: $HEROKU_API_KEY
     buildpack: heroku/python
@@ -21,3 +24,6 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+    run:
+      - "python manage.py makemigrations"
+      - "python manage.py migrate"
