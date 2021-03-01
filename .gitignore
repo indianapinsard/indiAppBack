@@ -9,17 +9,13 @@
 .git/hook/
 
 # Environments
-.env
-.venv
-env/
 venv/
-ENV/
-env.bak/
-venv.bak/
+.env
 
 # Django stuff:
 *.log
 db.sqlite3
+**/migrations/
 
 # Flake config
 setup.cfg
