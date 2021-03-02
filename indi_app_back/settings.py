@@ -34,8 +34,9 @@ if ENV == 'dev' or ENV == 'staging':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'staging-back-app.herokuapp.com', 'prod-back-app.herokuapp.com', 'api.wattplanner.ovh']
 
+BASE_URL = "https://api.wattplanner.ovh"
+ALLOWED_HOSTS = ['127.0.0.1', 'staging-back-app.herokuapp.com', 'prod-back-app.herokuapp.com', 'api.wattplanner.ovh']
 
 # Application definition
 
@@ -52,9 +53,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -168,5 +169,9 @@ STATICFILES_DIRS = (
 )
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:8080', 'https://www.wattplanner.ovh']
-
 CORS_ALLOW_CREDENTIALS = True
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
