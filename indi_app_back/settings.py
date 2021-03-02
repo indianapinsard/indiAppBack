@@ -168,5 +168,7 @@ STATICFILES_DIRS = (
 )
 
 CORS_ORIGIN_WHITELIST = ['http://localhost:8080', 'https://www.wattplanner.ovh']
-
 CORS_ALLOW_CREDENTIALS = True
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
