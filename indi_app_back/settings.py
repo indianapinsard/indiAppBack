@@ -35,7 +35,7 @@ else:
     DEBUG = False
 
 
-BASE_URL = "https://api.wattplanner.ovh"
+#BASE_URL = "https://api.wattplanner.ovh"
 ALLOWED_HOSTS = ['127.0.0.1', 'staging-back-app.herokuapp.com', 'prod-back-app.herokuapp.com', 'api.wattplanner.ovh']
 
 # Application definition
