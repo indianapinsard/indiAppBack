@@ -9,6 +9,7 @@ class ArticleList(generics.ListCreateAPIView):
     serializer_class = ArticleSerializer
 
     def list(self, request):
+        print("heyehey")
         queryset = self.get_queryset()
         serializer = ArticleSerializer(queryset, many=True)
         return Response(serializer.data)
