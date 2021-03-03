@@ -28,4 +28,3 @@ CORS_ORIGIN_WHITELIST = [
     u'http://localhost:8888',
     u'http://127.0.0.1:8000',
 ]
-CORS_ALLOW_CREDENTIALS = True

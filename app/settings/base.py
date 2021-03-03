@@ -107,6 +107,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+CORS_ALLOW_CREDENTIALS = True
+
 if not ENV:
     print('ENV variable not set in .env. Aborting.')
     exit()
