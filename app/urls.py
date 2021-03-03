@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from indi.views import ArticleList
+from core.views import ArticleList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
